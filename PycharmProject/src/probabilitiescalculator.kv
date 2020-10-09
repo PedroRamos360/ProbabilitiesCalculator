@@ -1,0 +1,78 @@
+#:import c src.colors
+#:import bt src.widgets.primary_button.PrimaryButton
+
+<StartScreen>:
+    orientation: "vertical"
+    Label:
+        size_hint: None, None
+        font_size: 50
+        width: 200
+        height: 50
+        center_x: 400
+        center_y: 520
+        text: "Probabilities Calculator"
+        color: c.white
+
+    PrimaryButton:
+        center_y: 400
+		text: "Arrangements"
+		on_press: root.on_button1_pressed()
+
+    PrimaryButton:
+    	center_y: 280
+		text: "Combinations"
+
+    PrimaryButton:
+		center_y: 160
+		text: "Permutations"
+
+<ArrengementsScreen>:
+    Label:
+        size_hint: None, None
+        font_size: 20
+        width: 50
+        height: 50
+        center_y: 300
+        center_x: 100
+        text: "A"
+
+    Label:
+        size_hint: None, None
+        font_size: 20
+        width: 50
+        height: 50
+        center_y: 300
+        center_x: 150
+        text: "n"
+
+    TextInput:
+        size_hint: None, None
+        width: 50
+        height: 50
+        center_y: 300
+        center_x: 200
+
+    Label:
+        size_hint: None, None
+        font_size: 20
+        width: 50
+        height: 50
+        text: "p"
+        center_y: 300
+        center_x: 250
+
+    TextInput:
+        size_hint: None, None
+        width: 50
+        height: 50
+        center_y: 300
+        center_x: 300
+
+    Label:
+        size_hint: None, None
+        font_size: 20
+        width: 50
+        height: 50
+        center_y: 300
+        center_x: 350
+        text: "="
