@@ -1,4 +1,4 @@
-from src.backend.factorial import factorial
+from backend.factorial import factorial
 
 
 def arrangements(n, p):

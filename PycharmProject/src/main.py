@@ -7,8 +7,13 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-from src import colors
-from src.backend import math
+from backend import math
+
+from widgets.primary_button import PrimaryButton
+from widgets.custom_label import CustomLabel
+from widgets.custom_text_input import CustomTextInput
+from widgets.back_button import BackButton
+from widgets.calculate_button import CalculateButton
 
 kivy.require("1.9.1")
 
@@ -117,7 +122,7 @@ class ProbabilitiesCalculatorApp(App):
 		return RootWidget()
 
 
-Window.clearcolor = colors.background_color
+Window.clearcolor = (185/255, 214/255, 170/242, 1)
 
 window = ProbabilitiesCalculatorApp()
 window.run()

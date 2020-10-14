@@ -1,6 +1,5 @@
 import kivy
 from kivy.uix.button import Button
-from src import colors
 
 kivy.require("1.9.1")
 
@@ -13,4 +12,4 @@ class PrimaryButton(Button):
 		self.height = 100
 		self.center_x = 400
 		self.font_size = 30
-		self.background_color = colors.button_color
+		self.background_color = (0/255, 109/255, 170/255, 1)

@@ -1,11 +1,3 @@
-#:import c src.colors
-
-#:import PrimaryButton src.widgets.primary_button.PrimaryButton
-#:import CustomLabel src.widgets.custom_label.CustomLabel
-#:import CustomTextInput src.widgets.custom_text_input.CustomTextInput
-#:import BackButton src.widgets.back_button.BackButton
-#:import CalculateButton src.widgets.calculate_button.CalculateButton
-
 <Rootwidget>:
     Screen:
         name: "StartScreen"
@@ -31,7 +23,7 @@
         center_x: 400
         center_y: 520
         text: "Probabilities Calculator"
-        color: c.white
+        color: (1, 1, 1, 1)
 
     PrimaryButton:
         center_y: 400
@@ -142,7 +134,7 @@
 
     CustomLabel:
         center_x: 250
-        text: "p"
+        text: "r"
 
     CustomTextInput:
         id: repetitions_input
