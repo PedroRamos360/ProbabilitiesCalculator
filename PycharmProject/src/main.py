@@ -4,6 +4,7 @@ from kivy.core.window import Window
 from kivy.properties import ObjectProperty
 
 from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
 
@@ -122,7 +123,7 @@ class ProbabilitiesCalculatorApp(App):
 		return RootWidget()
 
 
-Window.clearcolor = (185/255, 214/255, 170/242, 1)
+Window.clearcolor = (110/255, 140/255, 246/242, 1)
 
 window = ProbabilitiesCalculatorApp()
 window.run()

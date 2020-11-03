@@ -12,4 +12,6 @@ class PrimaryButton(Button):
 		self.height = 100
 		self.center_x = 400
 		self.font_size = 30
-		self.background_color = (0/255, 109/255, 170/255, 1)
+		self.color = (0, 0, 0, 1)
+		self.background_normal = ''
+		self.background_color = (128/255, 255/255, 125/255, 1)

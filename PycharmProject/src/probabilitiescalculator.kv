@@ -16,26 +16,27 @@
 <StartScreen>:
     orientation: "vertical"
     Label:
-        size_hint: None, None
+        font_name: "RobotoMono-Regular"
         font_size: 50
         width: 200
         height: 50
-        center_x: 400
-        center_y: 520
+        pos_hint: {'center_x': 0.5, 'center_y': 0.85}
         text: "Probabilities Calculator"
         color: (1, 1, 1, 1)
 
     PrimaryButton:
-        center_y: 400
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
 		text: "Arrangements"
 		on_press: root.on_arrangements_pressed()
 
     PrimaryButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
     	center_y: 280
 		text: "Combinations"
 		on_press: root.on_combinations_pressed()
 
     PrimaryButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
 		center_y: 160
 		text: "Permutations"
 	    on_press: root.on_permutations_pressed()
