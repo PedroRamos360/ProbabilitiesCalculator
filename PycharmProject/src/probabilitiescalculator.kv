@@ -15,6 +15,17 @@
 
 <StartScreen>:
     orientation: "vertical"
+    BoxLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.95, 0.95
+        canvas.before:
+            Color:
+                rgba: 74/255, 114/255, 255/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
     Label:
         font_name: "RobotoMono-Regular"
         font_size: 50
@@ -22,7 +33,7 @@
         height: 50
         pos_hint: {'center_x': 0.5, 'center_y': 0.85}
         text: "Probabilities Calculator"
-        color: (1, 1, 1, 1)
+        color: 1, 1, 1, 1
 
     PrimaryButton:
         pos_hint: {'center_x': 0.5, 'center_y': 0.6}
@@ -43,9 +54,18 @@
 
 
 <ArrangementsScreen>:
-
     elements_input: elements_input
     arrangements_input: arrangements_input
+    BoxLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.95, 0.95
+        canvas.before:
+            Color:
+                rgba: 74/255, 114/255, 255/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
 
     BackButton:
         on_press: app.go_back()
@@ -78,9 +98,17 @@
         on_press: root.on_calculate()
 
 <CombinationsScreen>:
-
     elements_input: elements_input
     combinations_input: combinations_input
+    BoxLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.95, 0.95
+        canvas.before:
+            Color:
+                rgba: 74/255, 114/255, 255/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
     BackButton:
         on_press: app.go_back()
@@ -114,9 +142,18 @@
 
 
 <PermutationsScreen>:
-
     elements_input: elements_input
     repetitions_input: repetitions_input
+
+    BoxLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.95, 0.95
+        canvas.before:
+            Color:
+                rgba: 74/255, 114/255, 255/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
     BackButton:
         on_press: app.go_back()
