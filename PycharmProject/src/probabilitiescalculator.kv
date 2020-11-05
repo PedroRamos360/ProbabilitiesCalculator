@@ -26,14 +26,8 @@
                 size: self.size
 
 
-    Label:
-        font_name: "RobotoMono-Regular"
-        font_size: 50
-        width: 200
-        height: 50
-        pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+    Title:
         text: "Probabilities Calculator"
-        color: 1, 1, 1, 1
 
     PrimaryButton:
         pos_hint: {'center_x': 0.5, 'center_y': 0.6}
@@ -66,36 +60,38 @@
                 pos: self.pos
                 size: self.size
 
+    Title:
+        text: "Arrangements"
 
     BackButton:
         on_press: app.go_back()
 
     CustomLabel:
-        center_x: 100
-        text: "A"
-
-    CustomLabel:
-        center_x: 150
-        text: "n"
+        text: "Total elements"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.7}
 
     CustomTextInput:
         id: elements_input
-        center_x: 200
+        pos_hint: {'center_x': 0.7, 'center_y': 0.7}
 
     CustomLabel:
-        center_x: 250
-        text: "p"
+        text: "Elements per group"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.5}
 
     CustomTextInput:
         id: arrangements_input
-        center_x: 300
-
-    CustomLabel:
-        center_x: 350
-        text: "="
+        pos_hint: {'center_x': 0.7, 'center_y': 0.5}
 
     CalculateButton:
         on_press: root.on_calculate()
+
+    ResultOutput:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
 <CombinationsScreen>:
     elements_input: elements_input
@@ -110,35 +106,38 @@
                 pos: self.pos
                 size: self.size
 
+    Title:
+        text: "Combinations"
+
     BackButton:
         on_press: app.go_back()
 
     CustomLabel:
-        center_x: 100
-        text: "C"
-
-    CustomLabel:
-        center_x: 150
-        text: "n"
+        text: "Total elements"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.7}
 
     CustomTextInput:
         id: elements_input
-        center_x: 200
+        pos_hint: {'center_x': 0.7, 'center_y': 0.7}
 
     CustomLabel:
-        center_x: 250
-        text: "p"
+        text: "Elements per group"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.5}
 
     CustomTextInput:
         id: combinations_input
-        center_x: 300
-
-    CustomLabel:
-        center_x: 350
-        text: "="
+        pos_hint: {'center_x': 0.7, 'center_y': 0.5}
 
     CalculateButton:
         on_press: root.on_calculate()
+
+    ResultOutput:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
 
 <PermutationsScreen>:
@@ -155,35 +154,36 @@
                 pos: self.pos
                 size: self.size
 
+    Title:
+        text: "Permutations"
+
     BackButton:
         on_press: app.go_back()
 
     CustomLabel:
-        center_x: 100
-        text: "P"
-
-    CustomLabel:
-        center_x: 150
-        text: "n"
+        text: "Total elements"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.7}
 
     CustomTextInput:
         id: elements_input
-        center_x: 200
+        pos_hint: {'center_x': 0.7, 'center_y': 0.7}
 
     CustomLabel:
-        center_x: 250
-        text: "r"
+        text: "Repetitions"
+        pos_hint: {'center_x': 0.3, 'center_y': 0.5}
 
     CustomTextInput:
         id: repetitions_input
+        pos_hint: {'center_x': 0.7, 'center_y': 0.5}
         multiline: True
-        center_x: 300
-
-    CustomLabel:
-        center_x: 350
-        text: "="
 
     CalculateButton:
         on_press: root.on_calculate()
 
-
+    ResultOutput:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size

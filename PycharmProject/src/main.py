@@ -15,6 +15,8 @@ from widgets.custom_label import CustomLabel
 from widgets.custom_text_input import CustomTextInput
 from widgets.back_button import BackButton
 from widgets.calculate_button import CalculateButton
+from widgets.title_label import Title
+from widgets.result_output import ResultOutput
 
 kivy.require("1.9.1")
 
