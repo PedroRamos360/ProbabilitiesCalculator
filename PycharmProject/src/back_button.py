@@ -8,7 +8,7 @@ kivy.require("1.9.1")
 class BackButton(ButtonBehavior, Image):
 	def __init__(self, **kwargs):
 		super(BackButton, self).__init__(**kwargs)
-		self.source = "img/arrowback.jpg"
+		self.source = "arrowback.jpg"
 		self.size_hint = None, None
 
 		self.font_size = 20

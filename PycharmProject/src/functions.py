@@ -1,5 +1,4 @@
-from backend.factorial import factorial
-
+from math import factorial
 
 def arrangements(n, p):
 	if n < 0 or p < 0:
@@ -18,6 +17,7 @@ def combinations(n, p):
 
 
 def permutations(n, p):
+	p = p.strip()
 	p = p.split('\n')
 	if n < 0:
 		raise ValueError("Total elements can't be lower than zero")

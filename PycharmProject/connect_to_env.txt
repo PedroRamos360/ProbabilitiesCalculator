@@ -1,0 +1,3 @@
+import os
+
+os.system(r"D:\GitHub\ProbabilitiesCalculator\PycharmProject\env\Scripts\activate")
