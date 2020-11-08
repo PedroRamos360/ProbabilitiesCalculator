@@ -1,0 +1,3 @@
+title=Probabilities Calculator Mobile
+author=Pedro Henrique Warken Ramos
+orientation=portrait

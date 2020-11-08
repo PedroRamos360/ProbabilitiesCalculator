@@ -1,0 +1,49 @@
+<Rootwidget>:
+    canvas.before:
+        Color:
+            rgba: 110/255, 140/255, 246/242, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Screen:
+        name: "StartScreen"
+        StartScreen:
+    Screen:
+        name: "ArrangementsScreen"
+        ArrangementsScreen:
+    Screen:
+        name: "CombinationsScreen"
+        CombinationsScreen:
+    Screen:
+        name: "PermutationsScreen"
+        PermutationsScreen:
+
+<StartScreen>:
+    MDBoxLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.95, 0.95
+        canvas.before:
+            Color:
+                rgba: 74/255, 114/255, 255/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Title:
+        text: "Probabilities Calculator"
+
+    PrimaryButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+		text: "Arrangements"
+		on_press: root.on_arrangements_pressed()
+
+    PrimaryButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+		text: "Combinations"
+		on_press: root.on_combinations_pressed()
+
+    PrimaryButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+		text: "Permutations"
+	    on_press: root.on_permutations_pressed()
