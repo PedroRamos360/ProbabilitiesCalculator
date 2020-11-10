@@ -52,19 +52,23 @@ class ArrangementsScreen(FloatLayout):
 
 	def on_calculate(self):
 		try:
+			if int(self.elements_input.text) > 150:
+				raise ArithmeticError
 			result = functions.arrangements(int(self.elements_input.text), int(self.arrangements_input.text))
-			if self.calculated:
-				self.remove_widget(self.calculation_result)
+			
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
 
 			self.calculation_result.text = str(result)
-			self.calculated = True
 
 		except ValueError:
+			self.calculation_result.text = "Try different values"
+		except ArithmeticError:
+			self.calculation_result.text = "Values are to high"
+		finally:
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
 			self.calculated = True
-			self.calculation_result.text = "Try different values"
-		finally:
 			self.add_widget(self.calculation_result)
 
 
@@ -82,18 +86,22 @@ class CombinationsScreen(FloatLayout):
 
 	def on_calculate(self):
 		try:
+			if int(self.elements_input.text) > 150:
+				raise ArithmeticError
 			result = functions.combinations(int(self.elements_input.text), int(self.combinations_input.text))
-			if self.calculated:
-				self.remove_widget(self.calculation_result)
+			
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
 
 			self.calculation_result.text = str(result)
-			self.calculated = True
 		except ValueError:
+			self.calculation_result.text = "Try different values"
+		except ArithmeticError:
+			self.calculation_result.text = "Values are to high"
+		finally:
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
 			self.calculated = True
-			self.calculation_result.text = "Try different values"
-		finally:
 			self.add_widget(self.calculation_result)
 
 
@@ -111,18 +119,26 @@ class PermutationsScreen(FloatLayout):
 
 	def on_calculate(self):
 		try:
-			result = functions.permutations(int(self.elements_input.text), self.repetitions_input.text)
-			if self.calculated:
-				self.remove_widget(self.calculation_result)
+			if int(self.elements_input.text) > 150:
+				raise ArithmeticError
+
+			if self.repetitions_input.text == "":
+				result = functions.permutations(int(self.elements_input.text), None)
+			else:
+				result = functions.permutations(int(self.elements_input.text), self.repetitions_input.text)
+
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
 
 			self.calculation_result.text = str(result)
-			self.calculated = True
 		except ValueError:
+			self.calculation_result.text = "Try different values"
+		except ArithmeticError:
+			self.calculation_result.text = "Values are to high"
+		finally:
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
 			self.calculated = True
-			self.calculation_result.text = "Try different values"
-		finally:
 			self.add_widget(self.calculation_result)
 
 

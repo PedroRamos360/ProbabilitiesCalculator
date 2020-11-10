@@ -1,4 +1,4 @@
-env
+venv
 src/build
 src/dist
 src/main.spec

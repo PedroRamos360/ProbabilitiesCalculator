@@ -17,12 +17,12 @@ def combinations(n, p):
 
 
 def permutations(n, p):
-	p = p.strip()
-	p = p.split('\n')
 	if n < 0:
 		raise ValueError("Total elements can't be lower than zero")
 	total = factorial(n)
 	if p:
+		p = p.strip()
+		p = p.split('\n')
 		for number in p:
 			if int(number) < 0:
 				raise ValueError("The number of repetitions can't be lower than zero")
