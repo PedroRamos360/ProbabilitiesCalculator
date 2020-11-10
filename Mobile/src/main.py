@@ -47,7 +47,7 @@ class ArrangementsScreen(FloatLayout):
 		pos_hint={'center_x': 0.5, 'center_y': 0.15},
 		color=(0, 0, 0, 1),
 		font_name="RobotoMono-Regular",
-		font_size=30
+		font_size=40
 	)
 
 	def on_calculate(self):
@@ -55,6 +55,9 @@ class ArrangementsScreen(FloatLayout):
 			result = functions.arrangements(int(self.elements_input.text), int(self.arrangements_input.text))
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
+
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
 
 			self.calculation_result.text = str(result)
 			self.calculated = True
@@ -86,6 +89,9 @@ class CombinationsScreen(FloatLayout):
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
 
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
+
 			self.calculation_result.text = str(result)
 			self.calculated = True
 		except ValueError:
@@ -114,6 +120,9 @@ class PermutationsScreen(FloatLayout):
 			result = functions.permutations(int(self.elements_input.text), self.repetitions_input.text)
 			if self.calculated:
 				self.remove_widget(self.calculation_result)
+
+			if len(str(result)) > 12:
+				result = '{:e}'.format(result)
 
 			self.calculation_result.text = str(result)
 			self.calculated = True

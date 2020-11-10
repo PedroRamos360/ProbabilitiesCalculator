@@ -13,7 +13,7 @@ class CalculateButton(Button):
 		self.pos_hint = {'center_x': 0.5, 'center_y': 0.3}
 		self.background_normal = ''
 		self.background_color = (119.0/255, 182.0/255, 234.0/255, 1)
-		self.font_size = 30
-		self.width = 450
-		self.height = 100
+		self.font_size = 40
+		self.width = 550
+		self.height = 150
 		self.text = "Calculate"

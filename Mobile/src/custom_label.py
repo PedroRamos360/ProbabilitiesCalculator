@@ -9,6 +9,6 @@ class CustomLabel(Label):
 		super(CustomLabel, self).__init__(**kwargs)
 		self.font_name = "RobotoMono-Regular"
 		self.color = 55.0/255, 57.0/255, 58.0/255, 1
-		self.font_size = 30
+		self.font_size = 40
 		self.width = 100
 		self.height = 50
