@@ -28,6 +28,6 @@ def permutations(n, p):
 				raise ValueError("The number of repetitions can't be lower than zero")
 			if n < int(number):
 				raise ValueError("Total elements can't be lower than the repetitions of one element")
-			total /= int(number)
+			total /= factorial(int(number))
 
 	return int(total)

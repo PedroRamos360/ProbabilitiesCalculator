@@ -135,13 +135,13 @@
         pos_hint: {'center_x': 0.5, 'center_y': 0.65}
 
     CustomLabel:
-        text: "Repetitions"
+        text: "Repetitions\n(separated by space)"
         pos_hint: {'center_x': 0.5, 'center_y': 0.55}
 
     CustomTextInput:
         id: repetitions_input
         pos_hint: {'center_x': 0.5, 'center_y': 0.45}
-        multiline: True
+        input_filter: None
 
     CalculateButton:
         on_press: root.on_calculate()
